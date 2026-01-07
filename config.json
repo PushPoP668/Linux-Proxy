@@ -1,0 +1,31 @@
+{
+  "log": {
+    "level": "info"
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 10808
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "hysteria2",
+      "tag": "proxy",
+      "server": "hk1.jueduibupao.top",
+      "server_port": 50001,
+      "password": "4bc3fa63-c961-4246-92dd-bc989098b9ff",
+      "tls": {
+        "enabled": true,
+        "server_name": "hk1.jueduibupao.top",
+        "insecure": true
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ]
+}
